@@ -25,3 +25,8 @@ will generate `target/universal/sbt_demo-1.0.zip`, ready to be deployed
 `$ sbt gen-idea`
 
 then open this directory in Intellij
+
+## Read more
+[https://www.playframework.com/documentation/latest/PlayConsole](https://www.playframework.com/documentation/latest/PlayConsole) (just replace `activator` with `sbt`)
+
+[http://www.scala-sbt.org/0.13/tutorial/Running.html](http://www.scala-sbt.org/0.13/tutorial/Running.html)
