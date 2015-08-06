@@ -1,10 +1,12 @@
-# Demo API service built with sbt and Play
+# Demo API service built with multi-project sbt and Play
 
 ## Prerequisite
 `$ brew install sbt`
 
 ## Run the service
 `$ sbt run`
+
+this will take some time the first time. go grab a cup of coffee.
 
 then browse [localhost:9000](http://localhost:9000/)
 
