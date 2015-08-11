@@ -21,6 +21,10 @@ then browse [localhost:9000](http://localhost:9000/)
 
 will generate `target/universal/sbt_demo-1.0.zip`, ready to be deployed
 
+To read more about production deployment
+
+[https://www.playframework.com/documentation/2.4.x/Production](https://www.playframework.com/documentation/2.4.x/Production)
+
 ## Generate Intellij project
 `$ sbt gen-idea`
 
