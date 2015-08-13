@@ -1,7 +1,7 @@
 FROM whence/sbt:latest
 MAINTAINER Wesley Li <adwhence@gmail.com>
 
-ADD template /root/play/
+COPY template /root/play/
 
 WORKDIR /root/play
 
