@@ -25,11 +25,6 @@ To read more about production deployment
 
 [https://www.playframework.com/documentation/latest/Production](https://www.playframework.com/documentation/latest/Production)
 
-## Generate Intellij project
-`$ sbt gen-idea`
-
-then open this directory in Intellij
-
 ## Read more
 [https://www.playframework.com/documentation/latest/PlayConsole](https://www.playframework.com/documentation/latest/PlayConsole) (just replace `activator` with `sbt`)
 
