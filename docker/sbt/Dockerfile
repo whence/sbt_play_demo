@@ -10,4 +10,4 @@ RUN \
   tar -xf sbt.tgz && \
   rm sbt.tgz
 
-RUN apk add bash
+RUN apk --update add bash
