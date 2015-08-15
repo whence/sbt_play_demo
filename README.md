@@ -25,6 +25,13 @@ To read more about production deployment
 
 [https://www.playframework.com/documentation/latest/Production](https://www.playframework.com/documentation/latest/Production)
 
+## Build a docker image
+`$ docker build -t sbt_play_demo .`
+
+then to run the container
+
+`$ docker run -it sbt_play_demo /bin/bash`
+
 ## Read more
 [https://www.playframework.com/documentation/latest/PlayConsole](https://www.playframework.com/documentation/latest/PlayConsole) (just replace `activator` with `sbt`)
 
