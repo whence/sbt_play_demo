@@ -1,0 +1,35 @@
+# Typesafe-acctivator image built on top of Ubuntu Trusty, Oracle Java 8 and full activator dependencies (Play, Akka, etc)
+
+FROM ubuntu:trusty
+MAINTAINER Wesley Li <adwhence@gmail.com>
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN \
+  locale-gen en_AU.UTF-8 && \
+  update-locale LANG=en_AU.UTF-8 LC_ALL=en_AU.UTF-8
+
+RUN apt-get update && apt-get install -y curl ntp git build-essential unzip
+
+RUN curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie"\
+  http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz \
+    | tar -xzf - -C /opt &&\
+    ln -s /opt/jdk1.8.0_60 /opt/jdk
+
+ENV JAVA_HOME /opt/jdk
+
+RUN \
+  curl -L -o /opt/typesafe-activator-1.3.5-minimal.zip \
+    https://downloads.typesafe.com/typesafe-activator/1.3.5/typesafe-activator-1.3.5-minimal.zip && \
+  unzip -q /opt/typesafe-activator-1.3.5-minimal.zip -d /opt && \
+  rm /opt/typesafe-activator-1.3.5-minimal.zip
+
+ENV PATH ${PATH}:${JAVA_HOME}/bin:/opt/activator-1.3.5-minimal
+
+COPY . /root/web/
+
+WORKDIR /root/web
+
+RUN \
+  activator compile && \
+  activator test:compile
