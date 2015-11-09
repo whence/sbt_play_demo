@@ -15,7 +15,7 @@ assemble: compile
 
 check-sbt:
 ifndef SBT
-  $(error Cannot find activator or sbt)
+	$(error Cannot find activator or sbt)
 endif
 
 .PHONY: assemble check-sbt ci
