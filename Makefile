@@ -18,4 +18,4 @@ ifndef SBT
 	$(error Cannot find activator or sbt)
 endif
 
-.PHONY: assemble check-sbt ci
+.PHONY: assemble check-sbt ci compile
